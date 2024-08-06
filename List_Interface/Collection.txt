@@ -519,3 +519,21 @@ element = itr.previous();
 System.out.print(element+" ");
 }
 }
+
+##ABOUT LEGACY CLASSES:IMPORTANT TO KNOW ,B'Z IT HELPS TO UNDERSTAND HOW JAVA IS EVOLVING
+FOR MAINTAINING OR  INTEGRATING OLDER CODEBASES.
+
+Here are some key points about legacy classes:
+
+Java Collections Framework: Before Java 2 (JDK 1.2), there were no standard collection classes. Java introduced the Collections Framework in JDK 1.2, which included classes like ArrayList, HashMap, and HashSet. Legacy collection classes from before JDK 1.2, such as Vector, Stack, Hashtable, and Properties, are considered legacy. They are still part of the Java API but are not part of the newer java.util collections framework.
+
+Legacy Class Characteristics:
+
+Synchronization: Many legacy classes, such as Vector and Hashtable, are synchronized by default. This means they are thread-safe but can be less performant compared to newer classes like ArrayList and HashMap that are not synchronized by default.
+Design: Legacy classes often use older design patterns and interfaces that may not align with modern best practices.
+Backward Compatibility: Legacy classes are retained to ensure that existing code using them continues to work. However, new code should prefer newer classes from the Java Collections Framework.
+Interfacing with Legacy Code: Sometimes you need to integrate legacy classes with modern code. For example, the Collections utility class provides methods to convert legacy collections to newer collections and vice versa.
+
+Example: If you're asked about legacy classes in an interview, you might be asked to compare Vector with ArrayList. You should mention that Vector is synchronized and can be slower, whereas ArrayList is not synchronized and is generally preferred for non-thread-safe use cases due to its better performance.
+
+In summary, knowing about legacy classes is useful for understanding how Java has evolved and for maintaining or integrating older codebases.
