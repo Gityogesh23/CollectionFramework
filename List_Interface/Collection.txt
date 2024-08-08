@@ -537,3 +537,4 @@ Interfacing with Legacy Code: Sometimes you need to integrate legacy classes wit
 Example: If you're asked about legacy classes in an interview, you might be asked to compare Vector with ArrayList. You should mention that Vector is synchronized and can be slower, whereas ArrayList is not synchronized and is generally preferred for non-thread-safe use cases due to its better performance.
 
 In summary, knowing about legacy classes is useful for understanding how Java has evolved and for maintaining or integrating older codebases.
+
