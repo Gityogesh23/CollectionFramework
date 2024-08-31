@@ -1,0 +1,10 @@
+ArrayList=>
+extends Collection Interface and its a part of List<E> Interface
+1)Declared in=>java.util package.
+2)Implementation class of List collection and allowas duplicates as well as Null values in it.
+3)Internally uses Dynamic Array to store the elements.
+4)Unsynchronised Collection.
+5)Capacity is increased by an half of its existing capacity.
+6)traversing its elements by using Iterator and ListIterator.
+7)Introduced in jdk 1.2 
+8)its an legacy class. 
