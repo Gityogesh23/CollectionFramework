@@ -9,9 +9,6 @@ class UsingArrayList{
         List<Integer>list=new ArrayList<>();//upcasting and more generic code
         System.out.println("enter the size of an list");
         int n=sc.nextInt();//giving an  size of an arryList
-        
-        
-      
         try{
             if(n>=0){
                 System.out.println("enter the Elements: ") ;
@@ -19,9 +16,9 @@ class UsingArrayList{
                     int num=sc.nextInt();
                     list.add(num); 
             }
-                 // else{
-                //     System.out.println("plz enter valid number");
-                // }
+            
+        
+              
                  //Autoboxing internally done by JVM as ArrayList<>collection only works with objects=>
                           //so=>Integer.valueOf(num)=>will converts primtive to non-primitive type
                 //similarly if its String num=>then num.parseInt()=> static Integer valueOf(int) it returns value of an int as a Integer.
@@ -36,7 +33,7 @@ class UsingArrayList{
         System.out.println("plz enter valid number:");
     }
     }
-}
+};
 
 /*
  1. Conversion from int to Integer: Autoboxing
