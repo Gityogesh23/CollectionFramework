@@ -9,32 +9,37 @@ class UsingArrayList{
         List<Integer>list=new ArrayList<>();//upcasting and more generic code
         System.out.println("enter the size of an list");
         int n=sc.nextInt();//giving an  size of an arryList
-        try{
-            if(n>=0){
-                System.out.println("enter the Elements: ") ;
-                for(int i=0;i<n;i++){
-                    int num=sc.nextInt();
-                    list.add(num); 
+        //It is a Scanner class method used to get the next complete token from 
+        //the scanner which is in using. A complete token is preceded and followed by input that matches the delimiter pattern.
+        while (true) {
+            String input=sc.next();
+
+            if(input.equalsIgnoreCase("done")){
+                break;
+             }
+
+        
+    try{
+        // Parse the input as an integer and add it to the ArrayList
+            int number=Integer.parseInt(input);
+            list.add(number);
+    }catch(NumberFormatException e){
+            //e.printStackTrace();
+            System.out.println("plz enter valid number OR type done to finish");
             }
+        }
+          // Display the elements of the dynamic array
+          System.out.println("You entered the following elements:");
+          for (int element : list) {
+              System.out.print(element + " ");
+         }
+       }
+    }
             
         
               
-                 //Autoboxing internally done by JVM as ArrayList<>collection only works with objects=>
-                          //so=>Integer.valueOf(num)=>will converts primtive to non-primitive type
-                //similarly if its String num=>then num.parseInt()=> static Integer valueOf(int) it returns value of an int as a Integer.
-                System.out.println("Array list become: ");
-                for(int ele:list){
-                    System.out.print(" "+ele);
-                }
-            }
-        
-      
-    }catch(NumberFormatException e){
-        System.out.println("plz enter valid number:");
-    }
-    }
-};
-
+//Autoboxing internally done by JVM as ArrayList<>collection only works with objects=>
+ //so=>Integer.valueOf(num)=>will converts primtive to non-primitive type.
 /*
  1. Conversion from int to Integer: Autoboxing
 Autoboxing is the automatic conversion of a primitive type (e.g., int) into its
