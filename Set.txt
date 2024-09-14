@@ -1,0 +1,227 @@
+# Set=>Its an part of Colletion Hierarchy.All tghe methods of Collection Interface are 
+same  as methods of Set Interface.
+The Set Interface is present in java.util package and extends the Collection interface. 
+It is an unordered collection of objects in which duplicate values cannot be stored. 
+It is an interface that implements the mathematical set. This interface contains the 
+methods inherited from the Collection interface and adds a feature that restricts the 
+insertion of the duplicate elements. There are two interfaces that extend the set 
+implementation namely SortedSet and NavigableSet.
+
+the navigable set extends the sorted set interface. Since a set doesn’t retain the 
+insertion order, the navigable set interface provides the implementation to navigate
+through the Set. The class which implements the navigable set is a TreeSet which is
+an implementation of a self-balancing tree. Therefore, this interface provides us 
+with a way to navigate through this tree.
+
+# Declaration: The Set interface is declared as:
+public interface Set extends Collection 
+
+Creating Set Objects:
+
+Since Set is an interface, objects cannot be created of the typeset. We always need 
+a class that extends this list in order to create an object. And also, after the 
+introduction of Generics in Java 1.5, it is possible to restrict the type of object
+that can be stored in the Set. This type-safe set can be defined as:
+
+// Obj is the type of the object to be stored in Set 
+Set<Obj> set = new HashSet<Obj> (); 
+
+ # discuss methods present in the Set interface :
+1)add(element)	:This method is used to add a specific element to the set. 
+                 The function adds the element only if the specified element is not already 
+                 present in the set else the function returns False if the element is already 
+                 present in the Set.
+2)addAll(collection)	:This method is used to append all of the elements from the mentioned 
+                        collection to the existing set. The elements are added randomly without following any 
+                        specific order.
+
+3)clear()	:This method is used to remove all the elements from the set but not delete
+             the set. The reference for the set still exists.
+
+4)contains(element)	:This method is used to check whether a specific element is 
+                     present in the Set or not.
+
+5)containsAll(collection)	:This method is used to check whether the set contains 
+                             all the elements present in the given collection or not. This method returns true if 
+                             the set contains all the elements and returns false if any of the elements are missing.
+
+6)hashCode()	:This method is used to get the hashCode value for this instance of the 
+                 Set. It returns an integer value which is the hashCode value for this instance of the Set.
+
+7)isEmpty()	:This method is used to check whether the set is empty or not.
+
+8)iterator()	:This method is used to return the iterator of the set. 
+                 The elements from the set are returned in a random order.
+9)remove(element)	:This method is used to remove the given element from the set. 
+                     This method returns True if the specified element is present in the Set otherwise it
+                    returns False.
+10)removeAll(collection)	:This method is used to remove all the elements from the collection 
+                            which are present in the set. This method returns true if this set changed as a result of the 
+                            call.
+11)retainAll(collection)	:This method is used to retain all the elements from the set which 
+                             are mentioned in the given collection. This method returns true if 
+                             this set changed as a result of the call.
+
+12)size()	:This method is used to get the size of the set. This returns an integer value
+             which signifies the number of elements.
+
+13)toArray()	:This method is used to form an array of the same elements as that of the 
+                Set.
+
+# Classes that implement the Set interface in Java Collections can be easily perceived 
+from the image below as follows and are listed as follows:
+
+HashSet
+EnumSet
+LinkedHashSet(if we want to follow insertion order then go with this.class)
+TreeSet
+
+Class 1: HashSet 
+HashSet class which is implemented in the collection framework is an inherent 
+implementation of the hash table data structure. The objects that we insert into 
+the HashSet do not guarantee to be inserted in the same order. The objects are inserted 
+based on their hashcode. This class also allows the insertion of NULL elements. 
+
+Class 2: EnumSet
+EnumSet class which is implemented in the collections framework is one of the specialized
+implementations of the Set interface for use with the enumeration type. It is a high-performance 
+set implementation, much faster than HashSet. All of the elements in an enum set must come 
+from a single enumeration type that is specified when the set is created either explicitly 
+or implicitly. Let’s see how to create a set object using this class. 
+
+// Java program to demonstrate the
+// creation of the set object
+// using the EnumSet class
+import java.util.*;
+
+enum Gfg { CODE, LEARN, CONTRIBUTE, QUIZ, MCQ }
+;
+
+public class GFG {
+
+    public static void main(String[] args)
+    {
+        // Creating a set
+        Set<Gfg> set1;
+
+        // Adding the elements
+        set1 = EnumSet.of(Gfg.QUIZ, Gfg.CONTRIBUTE,
+                          Gfg.LEARN, Gfg.CODE);
+
+        System.out.println("Set 1: " + set1);
+    }
+}
+Output: Set 1: [CODE, LEARN, CONTRIBUTE, QUIZ]
+
+Class 3: LinkedHashSet
+LinkedHashSet class which is implemented in the collections framework is an 
+ordered version of HashSet that maintains a doubly-linked List across all elements.
+When the iteration order is needed to be maintained this class is used. When iterating 
+through a HashSet the order is unpredictable, while a LinkedHashSet lets us iterate through 
+the elements in the order in which they were inserted. Let’s see how to create a set 
+object using this class. 
+Example:
+// Java program to demonstrate the
+// creation of Set object using
+// the LinkedHashset class
+import java.util.*;
+
+class GFG {
+
+    public static void main(String[] args)
+    {
+        Set<String> lh = new LinkedHashSet<String>();
+
+        // Adding elements into the LinkedHashSet
+        // using add()
+        lh.add("India");
+        lh.add("Australia");
+        lh.add("South Africa");
+
+        // Adding the duplicate
+        // element
+        lh.add("India");
+
+        // Displaying the LinkedHashSet
+        System.out.println(lh);
+
+        // Removing items from LinkedHashSet
+        // using remove()
+        lh.remove("Australia");
+        System.out.println("Set after removing "
+                           + "Australia:" + lh);
+
+        // Iterating over linked hash set items
+        System.out.println("Iterating over set:");
+        Iterator<String> i = lh.iterator();
+        while (i.hasNext())
+            System.out.println(i.next());
+    }
+}
+Output:[India, Australia, South Africa]
+Set after removing Australia:[India, South Africa]
+Iterating over set:
+India
+South Africa
+
+Class 4: TreeSet
+TreeSet class which is implemented in the collections framework and implementation 
+of the SortedSet Interface and SortedSet extends Set Interface. It behaves like a 
+simple set with the exception that it stores elements in a sorted format. TreeSet 
+uses a tree data structure for storage. Objects are stored in sorted, ascending order. 
+But we can iterate in descending order using the method TreeSet.descendingIterator(). 
+Let’s see how to create a set object using this class.
+
+// Java Program Demonstrating Creation of Set object
+// Using the TreeSet class
+
+// Importing utility classes
+import java.util.*;
+
+// Main class
+class GFG {
+
+    // Main driver method
+    public static void main(String[] args)
+    {
+        // Creating a Set object and declaring it of String
+        // type
+        // with reference to TreeSet
+        Set<String> ts = new TreeSet<String>();
+
+        // Adding elements into the TreeSet
+        // using add()
+        ts.add("India");
+        ts.add("Australia");
+        ts.add("South Africa");
+
+        // Adding the duplicate
+        // element
+        ts.add("India");
+
+        // Displaying the TreeSet
+        System.out.println(ts);
+
+        // Removing items from TreeSet
+        // using remove()
+        ts.remove("Australia");
+        System.out.println("Set after removing "
+                           + "Australia:" + ts);
+
+        // Iterating over Tree set items
+        System.out.println("Iterating over set:");
+        Iterator<String> i = ts.iterator();
+
+        while (i.hasNext())
+            System.out.println(i.next());
+    }
+}
+otput:[Australia, India, South Africa]
+Set after removing Australia:[India, South Africa]
+Iterating over set:
+India
+South Africa.
+
+
+
+
