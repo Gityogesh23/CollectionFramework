@@ -12,6 +12,7 @@ public class LinkedHashSetDemo {
          System.out.println("Enter " + n + " elements:");
          for(int i=0;i<n;i++){
              String ele=sc.nextLine();
+            
              linkedhash_set.add(ele);
     }
     System.out.println();
