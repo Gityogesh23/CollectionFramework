@@ -99,7 +99,7 @@ String numberString = "123";
 int primitiveInt = Integer.parseInt(numberString);
 Internal Process:
 The Integer.parseInt(String s) method parses the string character by
- character to verify that it represents a valid integer.
+ character to veri fy that it represents a valid integer.
 If the string is valid, it converts the string to an int using 
 arithmetic operations.
 Simplified Process:
