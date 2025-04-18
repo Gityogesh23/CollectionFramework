@@ -57,6 +57,8 @@ public class ComparatorDemo_2 {
         // // Sorting by age using AgeComparator
         // people.sort(new AgeComparator());
         // System.out.println("Sorted by age: " + people);
+
+        
          // Sorting by name using a lambda expression
         people.sort((p1, p2) -> p1.getName().compareTo(p2.getName()));
         System.out.println("Sorted by name (lambda): " + people);
