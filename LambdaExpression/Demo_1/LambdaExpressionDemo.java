@@ -42,6 +42,8 @@ public class LambdaExpressionDemo {
         
         List<String> names = Arrays.asList("John", "Alice", "Bob", "Charlie", "David");
         
+        //if you wwant to add with names.add(6)=>throws Exception=>java.lang.UnsupportedOperationException
+        //so coorect we is=>u have to wrap in it into =>List<String>names=new ArrayList(Arrays.asList("yogesh",..same list));
         // Traditional loop
         System.out.println("Traditional loop:");
         for (String name : names) {
