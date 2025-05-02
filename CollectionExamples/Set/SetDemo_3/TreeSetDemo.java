@@ -49,3 +49,44 @@ public class TreeSetDemo {
         }
     }
 }
+/*
+ public interface Comparable<T> {
+    int compareTo(T o);
+}
+It's used to define the natural ordering of objects. When you insert elements
+ into a TreeSet (or TreeMap), Java uses compareTo() (or compare() from Comparator)
+ to:
+Decide order
+Decide uniqueness (duplicate elements are not allowed in TreeSet)
+
+ Step-by-Step Internal Flow:
+First element is added — no comparison needed.
+Next element is compared using compareTo():
+newElement.compareTo(existingElement) is called.
+
+Based on the return value:
+0: Treat as duplicate, not inserted.
+< 0: Inserted to the left of current node.
+> 0: Inserted to the right of current node.
+
+This continues like a Binary Search Tree, ensuring elements are sorted.
+Behind the scenes, TreeSet uses a TreeMap with values as keys, so insertion 
+relies on:
+
+compareTo(key1, key2)
+
+| Feature  | `compareTo()` (Comparable)                      | `compare()` (Comparator) |
+| -------- | ----------------------------------------------- | ------------------------ |
+| Location | In the class itself                             | Separate class or lambda |
+| Purpose  | Natural order                                   | Custom order             |
+| Used by  | `TreeSet`, `TreeMap`, `Collections.sort()` etc. | Same                     |
+
+TreeSet<Student> students = new TreeSet<>();
+students.add(new Student(101, "Alice"));
+students.add(new Student(99, "Bob"));
+students.add(new Student(101, "Charlie")); // Duplicate ID
+
+compareTo() returns:
+99 < 101 → go left
+101 == 101 → duplicate → not inserted
+ */
