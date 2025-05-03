@@ -7,7 +7,7 @@ import java.util.TreeSet;
 import java.util.Set;
 //Note =>as all standard Wrapper claases are implements Comparable<T>interface so methods od intr=erface are easily call on thme as they are trated as objects in java eg. Integer.compare()
 //Interface Comparator<T> =>java.util=>int	compare(T o1, T o2)=>Returns a negative integer, zero, or a positive integer as the first argument is less than, equal to, or greater than the second.
-
+//(its gunctional interface so we can use them as assignment target in lambda expressions. and in method reference as well and so on...)
 //Comparable=>Interface Comparable<T>=>java.lang=>so its methods are direcltly can be used in any java program correct without import
 //int	compareTo(T o):Returns a negative integer, zero, or a positive integer as this object is less than, equal to, or greater than the specified object.	
 //Compares this object with the specified object for order.
