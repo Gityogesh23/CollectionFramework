@@ -1,40 +1,45 @@
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.TreeSet;
 
-import java.util.*;
 
-// Custom class
-class Person {
-    String name;
-    int age;
 
-    Person(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
+import java.util.Set;
+//Note =>as all standard Wrapper claases are implements Comparable<T>interface so methods od intr=erface are easily call on thme as they are trated as objects in java eg. Integer.compare()
+//Interface Comparator<T> =>java.util=>int	compare(T o1, T o2)=>Returns a negative integer, zero, or a positive integer as the first argument is less than, equal to, or greater than the second.
 
-    // For displaying the object
-    @Override
-    public String toString() {
-        return name + " (" + age + " years)";
-    }
+//Comparable=>Interface Comparable<T>=>java.lang=>so its methods are direcltly can be used in any java program correct without import
+//int	compareTo(T o):Returns a negative integer, zero, or a positive integer as this object is less than, equal to, or greater than the specified object.	
+//Compares this object with the specified object for order.
+
+class Person{
+  String name;
+  int age;
+
+  Person(String name,int age){
+    this.name=name;
+    this.age=age;
+  }
+
+  @Override
+  public String toString(){
+    return "person { "+name+", (" +age+ ")"+ "}";
+  }
 }
-
-// Comparator to sort by age
-class AgeComparator implements Comparator<Person> {
-    @Override
-    public int compare(Person p1, Person p2) {
-        // Sort by age, if age is same, sort by name to avoid duplicates
-        if (p1.age == p2.age) {
+    class AgeComparator implements Comparator<Person>{
+       @Override
+    public int compare(Person p1,Person p2){
+        if(p1.age==p2.age){
             return p1.name.compareTo(p2.name);
         }
-        return Integer.compare(p1.age, p2.age);
+        return Integer.compare(p1.age,p2.age);
+        }
     }
-}
 
 public class TreeSetDemo {
     public static void main(String[] args) {
         // TreeSet with custom comparator
         TreeSet<Person> personSet = new TreeSet<>(new AgeComparator());
-
         // Adding elements
         personSet.add(new Person("Alice", 30));
         personSet.add(new Person("Bob", 25));
@@ -48,7 +53,10 @@ public class TreeSetDemo {
             System.out.println(iterator.next());
         }
     }
+
 }
+
+
 /*
  public interface Comparable<T> {
     int compareTo(T o);
