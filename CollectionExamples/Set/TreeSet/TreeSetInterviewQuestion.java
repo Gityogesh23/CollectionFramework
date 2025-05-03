@@ -1,3 +1,4 @@
+package CollectionExamples.Set.TreeSet;
 /*
  The Question:
 "You have a list of employees with their names and salaries. Use TreeSet to sort 
