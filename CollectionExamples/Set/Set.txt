@@ -1,0 +1,55 @@
+ Overview of Interfaces and Classes:
+
+Interface/Class	 Maintains Order	 Allows Duplicates 	 Sorted?	   Underlying Structure
+Set	                   —	              ❌ No	         ❌ No	                    — (Interface)
+HashSet	              ❌ No	             ❌ No	       ❌ No	        Hash Table
+LinkedHashSet	     ✅ Yes (insertion)	 ❌ No	       ❌ No     	Hash Table + Linked List
+SortedSet	         ✅ Yes (sorted)	     ❌ No	        ✅ Yes	    — (Interface)
+TreeSet	             ✅ Yes (sorted)	     ❌ No	        ✅ Yes	      Red-Black Tree
+
+Key Points:
+Set is an interface – implemented by HashSet, LinkedHashSet, TreeSet.
+HashSet: Fast, no order.
+LinkedHashSet: Maintains insertion order.
+SortedSet: Interface for sorted sets, implemented by TreeSet.
+TreeSet: Keeps elements in sorted order, allows custom Comparator.
+===========================================================================
+Tips for Notes:
+Use HashSet when you just need uniqueness and performance.
+Use LinkedHashSet if you need insertion order preserved.
+Use TreeSet if you need sorted data, and optionally pass a Comparator.
+===========================================================================
+| Method                    | Description                                                                    |
+| ------------------------- | ------------------------------------------------------------------------------ |
+| `add(E e)`                | Adds the element to the set (if it's not already present).                     |
+| `addAll(Collection c)`    | Adds all elements from another collection (ignores duplicates).                |
+| `remove(Object o)`        | Removes the specified element if it exists.                                    |
+| `clear()`                 | Removes all elements from the set.                                             |
+| `contains(Object o)`      | Returns `true` if the set contains the element.                                |
+| `isEmpty()`               | Returns `true` if the set has no elements.                                     |
+| `size()`                  | Returns the number of elements in the set.                                     |
+| `iterator()`              | Returns an `Iterator` to traverse the set.                                     |
+| `forEach(Consumer)`       | Performs an action for each element using lambda or method reference.          |
+| `retainAll(Collection c)` | Retains only the elements also in the specified collection (set intersection). |
+| `removeAll(Collection c)` | Removes all elements that exist in the given collection.                       |
+| `equals(Object o)`        | Compares two sets for equality.                                                |
+| `toArray()`               | Converts the set to an array.                                                  |
+
+=========================================================================
+
+| Method                   | Description                                                  |
+| ------------------------ | ------------------------------------------------------------ |
+| `first()`                | Returns the lowest (first) element.                          |
+| `last()`                 | Returns the highest (last) element.                          |
+| `headSet(E toElement)`   | Returns elements less than the given element.                |
+| `tailSet(E fromElement)` | Returns elements greater than or equal to the given element. |
+| `subSet(E from, E to)`   | Returns elements in the given range (inclusive-exclusive).   |
+| `comparator()`           | Returns the comparator used, or `null` if natural ordering.  |
+
+========================================================================
+
+ Tips for Notes:
+Use HashSet when you just need uniqueness and performance.
+Use LinkedHashSet if you need insertion order preserved.
+Use TreeSet if you need sorted data, and optionally pass a Comparator.
+
