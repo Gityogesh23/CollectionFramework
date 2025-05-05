@@ -53,3 +53,52 @@ Use HashSet when you just need uniqueness and performance.
 Use LinkedHashSet if you need insertion order preserved.
 Use TreeSet if you need sorted data, and optionally pass a Comparator.
 
+##Set vs SortedSet:
+
+#Part of java.util package.
+#No duplicates allowed.
+#No guaranteed order of elements (depends on implementation).
+#Implementations: HashSet, LinkedHashSet, etc.
+
+Ex.
+Set<String> set = new HashSet<>();
+set.add("B");
+set.add("A");
+set.add("C");
+System.out.println(set);  // Random order
+
+✅ 2. SortedSet (Interface)
+Extends Set, part of java.util.
+
+Keeps elements in sorted (ascending) order.
+
+No duplicates.
+
+Implementation: TreeSet:
+
+Ex.
+SortedSet<String> sortedSet = new TreeSet<>();
+sortedSet.add("B");
+sortedSet.add("A");
+sortedSet.add("C");
+System.out.println(sortedSet);  // [A, B, C]
+
+Feature 	            Set	                        SortedSet
+Order	                No specific order	        Elements sorted automatically
+Duplicate elements  	Not allowed	                Not allowed
+Null element	        Allowed in HashSet	        Allowed only as first element (if at all)
+Common Implementations	HashSet, LinkedHashSet	    TreeSet
+Sorting logic	        Not applicable	            Uses natural order or comparator
+
+Ex.
+SortedSet<String> sortedSet = new TreeSet<>(Comparator.reverseOrder());
+sortedSet.add("Apple");
+sortedSet.add("Banana");
+sortedSet.add("Mango");
+System.out.println(sortedSet);  // [Mango, Banana, Apple]
+
+
+✅ Summary
+Use Set if order doesn’t matter.
+
+Use SortedSet if you need sorted elements automatically (like for ranking, alphabetized lists, etc.).
