@@ -1,8 +1,7 @@
 //prob statement=>print the employee salary greter than 50000
-
-
 import java.util.Arrays;
 import java.util.List;
+
 class Employee{
     private String name;
     private double salary;
@@ -22,7 +21,7 @@ class Employee{
     }
 @Override
 public String toString(){
-    return "Employee{' name= "+name+"\t"+"salary = "+salary+"}";
+    return "Employee{' name= "+name+"\t"+"salary = "+salary+"'}";
 }
 }
 
