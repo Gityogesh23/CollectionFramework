@@ -9,7 +9,7 @@ class User{
     User(){}
     User(String username,String password){
             this.username=username;
-        this.password=password;
+            this.password=password;
         
     }
 
@@ -23,7 +23,7 @@ class User{
 }
         public class ListToMapDemo {
             public static void main(String[] args) {
-                //Without duplicate object=>cox Map doen't allow duplicates so see next scenario ,
+                //Without duplicate object=>coz Map doen't allow duplicates so see next scenario ,
                 //prefer always that second Scenario
                 List<User>users=Arrays.asList(
                     new User("1","Alice" ),
