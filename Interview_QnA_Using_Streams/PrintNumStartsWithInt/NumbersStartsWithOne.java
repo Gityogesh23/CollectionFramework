@@ -13,6 +13,12 @@ public class NumbersStartsWithOne {
 
         List<Integer>numbers3=l.stream().filter(n->n.toString().contains("8")).collect(Collectors.toList());
         System.out.println("The Numebrs contains with 2 are: "+numbers3);
+
+        List<String>listOfStrings=Arrays.asList("yogesh","himanshi","ketiee","priyansh","Yogyashri");
+        List<String>filtered=listOfStrings.stream()
+        .filter(s->s.toLowerCase().startsWith("y"))
+        .collect(Collectors.toList());
+       System.out.println("List Containing String and strats with y letter  : "+filtered); // Print the filtered list
     }
 }
 /*
