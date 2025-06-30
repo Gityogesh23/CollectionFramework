@@ -42,8 +42,6 @@ Important Note: If the OptionalInt is empty (meaning the original stream was emp
 
 System.out.println(...)
 
-This is a standard Java statement used to print output to the console.
-It will print the integer value obtained from Arrays.stream(a).max().getAsInt().
 
 In Summary:
 The entire line System.out.println(Arrays.stream(a).max().getAsInt()); does the following:
