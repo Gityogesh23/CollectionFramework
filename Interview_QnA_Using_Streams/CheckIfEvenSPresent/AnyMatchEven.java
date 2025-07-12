@@ -37,4 +37,26 @@ of the stream as its argument and returns a boolean value. If the stream is empt
 noneMatch() returns true.
 
 Syntax:boolean allMatch(Predicate<? super T> predicate)
+
+//1. Check if all words have length more than 2
+List<String> words = Arrays.asList("apple", "banana", "cherry");
+boolean allMatchLength = words.stream().allMatch(word -> word.length() > 2);
+System.out.println(allMatchLength); // Output: true
+
+C)noneMatch()
+The noneMatch() method checks if none of the elements in the stream match a specified 
+predicate. It returns true if none of the elements match the predicate, and false 
+otherwise. The predicate is an inline lambda expression or a method reference that 
+takes an element of the stream as its argument and returns a boolean value. If the stream 
+is empty, noneMatch() returns true.
+
+Syntax: boolean noneMatch(Predicate<? super T> predicate)
+Example:
+
+//1. Check if all the fruit names are uppercase
+List<String> fruits = Arrays.asList("apple", "banana", "cherry");
+
+boolean noneMatchUpperCase = fruits.stream().noneMatch(fruit -> fruit.equals(fruit.toUpperCase()));
+System.out.println(noneMatchUpperCase); // Output: true
+
  */
