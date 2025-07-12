@@ -1,12 +1,22 @@
 
-//java program usin java 8 to che if even numbers are present in a list using AnyMany()
+//java program usin java 8 to che if even numbers are present in a list using AnyMatch()
 //also explore -->allMatch(),nonMatch()
 import java.util.Arrays;
 import java.util.List;
 
 public class AnyMatchEven {
-   List<Integer>l=Arrays.asList(12,23,45,11,23,24,46,68,98,70,89,99,88,66,44,100);
+    public static void main(String[] args) {
+        
     
+   List<Integer>l=Arrays.asList(12,23,45,11,23,24,46,68,98,70,89,99,88,66,44,100);
+  boolean status=l.stream().distinct().anyMatch(n->n%2==0);
+ 
+  if(status){
+    System.out.println("Yes list contains even numbers");
+  }else{
+    System.out.println("List doesn't contains even numbers");
+  }
+ }
 }
 
 
