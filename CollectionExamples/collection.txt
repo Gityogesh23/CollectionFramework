@@ -1,0 +1,1 @@
+file tells about collection framework in java.
