@@ -56,3 +56,6 @@ public class CollectionExample {
         System.out.println("Grouped by even/odd: " + evenOddGroups);
     }
 }
+
+
+//done with the collection demo.here
