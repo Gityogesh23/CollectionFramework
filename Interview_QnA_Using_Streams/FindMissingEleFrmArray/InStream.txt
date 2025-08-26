@@ -1,0 +1,32 @@
+## IntStream---->
+In Java 8, 
+ is a specialized stream designed to work with primitive int values, offering performance advantages over Stream<Integer> when dealing with large sequences of integers. It is part of the Java Stream API, introduced in Java 8 to enable functional-style operations on collections of elements.
+Key characteristics and features of IntStream in Java 8:
+Primitive Specialization:
+IntStream is the int primitive specialization of the Stream interface, meaning it directly handles int values without the overhead of boxing and unboxing to Integer objects. This leads to better memory efficiency and performance, especially for large datasets.
+Sequential and Parallel Operations:
+Like other streams, IntStream supports both sequential and parallel aggregate operations, allowing for efficient processing of data.
+Common Stream Operations:
+IntStream provides a rich set of intermediate operations (e.g., filter(), map(), flatMap(), distinct(), sorted()) and terminal operations (e.g., forEach(), reduce(), sum(), average(), min(), max(), count(), toArray()) that are familiar from the generic Stream API.
+Specific Utility Methods:
+It includes methods tailored for primitive int values, such as range(int startInclusive, int endExclusive) and rangeClosed(int startInclusive, int endInclusive) for generating sequences of numbers, and sum(), average(), min(), max() for calculating statistics directly on the int values.
+Creation Methods:
+IntStream instances can be created from various sources, including arrays of int (using Arrays.stream()), individual int values (using IntStream.of()), or by generating sequences (using IntStream.iterate() or IntStream.generate()).
+
+
+Example.
+import java.util.stream.IntStream;
+
+public class IntStreamExample {
+    public static void main(String[] args) {
+        // Create an IntStream from a range
+        IntStream.rangeClosed(1, 10)
+                 .filter(n -> n % 2 == 0) // Filter even numbers
+                 .forEach(System.out::println); // Print each even number
+
+        // Calculate the sum of numbers in an array
+        int[] numbers = {10, 20, 30, 40, 50};
+        int sum = IntStream.of(numbers).sum();
+        System.out.println("Sum: " + sum);
+    }
+}
