@@ -1,0 +1,28 @@
+Java 8 Streams (java.util.stream.Stream):
+This is the more modern and widely discussed meaning in the context of Java 8
+and later. It represents a sequence of elements from a source 
+(like a Collection, array, or I/O resource) that supports aggregate operations 
+in a functional style. Key characteristics include:
+Functional Operations: Supports operations like filter(), map(), reduce(), 
+forEach(), sorted(), etc.
+Lazy Evaluation: Intermediate operations are only executed when a terminal 
+operation is called.
+Immutability: Streams do not modify the underlying data source.
+Pipelining: Operations can be chained together to form a processing pipeline.
+Parallel Processing: Can be easily converted to parallel streams for 
+concurrent execution.
+Java I/O Streams (java.io.InputStream, java.io.OutputStream, etc.):
+These are fundamental to Java's input/output operations and have been 
+present since early versions of Java. They represent a flow of data, 
+either from an input source (like a file or network connection) or to an 
+output destination. Examples include:
+FileInputStream and FileOutputStream for file operations.
+ByteArrayInputStream and ByteArrayOutputStream for in-memory data.
+BufferedInputStream and BufferedOutputStream for performance optimization.
+In summary:
+When discussing "Streams" in the context of data processing and functional 
+programming in modern Java, one is almost always referring to Java 8 Streams 
+(java.util.stream.Stream).
+When discussing "Streams" in the context of reading from or writing to 
+external sources or destinations, one is referring to Java I/O Streams 
+(java.io package).
