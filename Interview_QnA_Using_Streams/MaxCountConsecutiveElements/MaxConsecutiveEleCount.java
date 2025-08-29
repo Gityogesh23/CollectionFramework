@@ -1,40 +1,38 @@
-
-//find frequency of consecutive elemtns from an array.
+//print the consecutive frequency of element---> 1 
+//Also examples are created here-->
+//1)print max count element. 2)print element :frequency
 
 public class MaxConsecutiveEleCount{
   public static void main(String[] args){
     int[]elements={1,1,0,0,1,1,1,2,3,4};  //we want count of 1's as per our requirement for now //it may differe as well
-    
-    int count=0 ,maxCount=0;
-    for(int numbers: elements){ //it will parses all the elements from array
+    int count=0,maxCount=0;
+    for(int num : elements){ //parses all the elements
 
-      if(numbers ==1){
-       
-        count++;//here we r just increase count but to save maxCount inside var next line becomes
-        maxCount= Math.max(count,maxCount);  //Math.max(int a.int b)-->return maximum integer value similar for other data types as well.
-     
-      }else{ //if numbers is not one then
-        count=0; //we initialize count again to zero as any other number than 1 is arrived.
+      if(count==1){
+        count++;
+        maxCount=Math.max(count,maxCount) ;//to maximum count //this method returns greter of two int values.
+//max will assign to maxCount
+      }else{
+        count=0; //so that number other than 1 comes -->count set to zero.//as per requirement
       }
-      
     }
-    System.out.println("Frequency of 1's -->"+maxCount);
+    System.out.println("Frequency of 1-->"+maxCount);
+
   }
 }
 /*
- please Go through it-->
- In Java, Math.max() is a static method that returns the greater of two int, long, 
- float, or double values. It is not directly used to find the maximum count of elements 
- within a Java Stream.
+In Java, Math.max() is a static method that returns the greater of two int, long, float, 
+or double values. It is not directly used to find the maximum count of elements within 
+a Java Stream.
 To find the maximum count of elements in a stream, particularly when you are counting 
-occurrences of distinct elements (e.g., finding the element with the highest frequency),
+occurrences of distinct elements (e.g., finding the element with the highest frequency), 
 you would typically use a combination of Stream API operations:
 Grouping and Counting:
 Use Collectors.groupingBy() with Collectors.counting() to create a Map where keys are 
 the distinct elements and values are their respective counts.
 Finding the Maximum Count:
-Obtain a stream of the map's entry set and then use the max() terminal operation with a 
-Comparator to find the entry with the highest count.
+Obtain a stream of the map's entry set and then use the max() terminal operation with 
+a Comparator to find the entry with the highest count.
 Example:
 Java
 
@@ -64,5 +62,5 @@ public class MaxCountInStream {
             System.out.println("No elements in the array.");
         }
     }
-}
- */
+} 
+*/
