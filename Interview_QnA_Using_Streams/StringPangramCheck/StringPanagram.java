@@ -11,8 +11,13 @@ To check string is panagram or not-->
 */
 public class StringPanagram {
     public static boolean isPanagram(String str){
-        if(str.isBlank()) return false;
-       
+        if(str.isBlank()) return false;  
+        /* if a value is empty or contains only whitespace 
+       How it works:
+        Returns true for an empty string ("") or a string with only whitespace (e.g., " ").
+        Returns false if the string contains any non-whitespace characters.
+        Example: s1 = " "; and s2 = "Hello, World!";. s1.isBlank() returns true, while s2.isBlank() returns false. 
+        */
         str=str.toLowerCase().replaceAll("[^A-Za-z0-9]","");
         Set<Character>set=new HashSet<>();
         for(char c: str.toCharArray()){
