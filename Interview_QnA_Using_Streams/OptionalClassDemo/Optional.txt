@@ -1,0 +1,37 @@
+# class Optional 
+To avoid NullPointerException its best and its a its a class in java 8 container
+Object that may or may not contain non-null values.
+This class is introduced to handle null values ,its a part of java.util package.
+
+#Key features and uses of Optional:
+
+1) Representing the Absence of a Value: Instead of returning null from a method 
+to indicate the absence of a result, you can return an Optional.empty(). 
+This makes the intent clear and forces the caller to handle the case where no value is 
+present.
+2) Avoiding Null Checks: Optional provides methods-->isPresent(),ifpresent(),
+orElse(),orElseGet(),and orElseThrow() that allows you to handle the presence and
+absence of values without explicit null check.
+3) Functional Programming Integration: Optional integrates well with java 8's Functional
+programming features such as lambdas,streams to enable more concise and readable code.
+
+Creating Optional instances:
+1) Optional.of(value):Creates an Optional with specified non-null values.
+Throws NullPointerException if value is null.
+
+2) Optional.ofNullable(value): Creates Optional with the specified value or an empty Optional if the value is null.
+
+3) Optional.empty(): Returns an empty Optional instance, representing the absence of a value. 
+
+Common Optional methods:
+1) isPresent(): Returns true if a value is present, false otherwise.
+2) get(): Returns the value if present, otherwise throws NoSuchElementException. Use with 
+   caution and only after verifying presence with isPresent().
+3) ifPresent(Consumer<? super T> consumer): If a value is present, invokes the specified 
+   consumer with the value.
+4) orElse(T other): Returns the value if present, otherwise returns the provided default value.
+5) orElseGet(Supplier<? extends T> other): Returns the value if present, otherwise returns the result of the provided supplier.
+6) orElseThrow(Supplier<? extends X> exceptionSupplier): Returns the value if present, otherwise throws the exception produced by the supplier.
+7) map(Function<? super T, ? extends U> mapper): If a value is present, applies the mapping function to it, and if the result is non-null, returns an Optional describing the result. 
+8) filter(Predicate<? super T> predicate): If a value is present and matches the given predicate, returns an Optional describing the value, otherwise returns an empty Optional.
+   

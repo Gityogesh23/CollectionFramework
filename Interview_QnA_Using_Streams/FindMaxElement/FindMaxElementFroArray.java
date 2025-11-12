@@ -6,10 +6,10 @@ import java.util.List;
 
 public class FindMaxElementFroArray {
     public static void main(String[] args) {
-        int[]a={12,34,56,78,90,100};
+        int[]a={12,34,56,78,90,100};//primitive type array
         System.out.println(Arrays.stream(a).max().getAsInt());
 
-        List<Integer>l=Arrays.asList(12,34,56,78,90,100);
+        List<Integer>l=Arrays.asList(12,34,56,78,90,100); //Non-Primitive Type Array.
         int max_number= l.stream().max(Comparator.naturalOrder()).get();
 
         System.out.println(max_number);
