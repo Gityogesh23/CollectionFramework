@@ -5,4 +5,4 @@ Ex. Predicate, consumer, supplier,Callable, etc.
 
 The return type of a Lambda function 
 (introduced in JDK 1.8) is a also functional interface. The Functional Interface 
-PREDICATE is defined in the java.util.function
+PREDICATE is defined in the java.util.function packages.
