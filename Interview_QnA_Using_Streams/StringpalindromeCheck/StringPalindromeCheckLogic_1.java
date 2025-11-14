@@ -1,6 +1,6 @@
 import java.util.stream.IntStream;
 
-public class StringPalindromeCheck {
+public class StringPalindromeCheckLogic_1 {
     public static void main(String[] args){
         String string="racecar";
         boolean isPalindrome=IntStream.range(0, string.length()/2)
