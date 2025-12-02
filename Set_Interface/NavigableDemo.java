@@ -23,3 +23,9 @@ public class NavigableDemo {
         sc.close(); // Close the scanner to avoid resource leak
     }
 }
+/*
+//Navigable set ---->
+The java.util.NavigableSet interface in Java is a subinterface of SortedSet that provides enhanced navigation methods for ordered sets. 
+It extends the functionality of SortedSet by offering methods to find elements based on their relationship to a given element and to 
+iterate through the set in both ascending and descending order.
+*/
