@@ -1,4 +1,4 @@
-//Print each character only ones from String.-->abccdde //expected o/p: abe
+//Print each character only ones from String.-->abccdde //expected o/p: a,b,c,d,e
 //prefer to go with Set Interface.
 import java.util.Scanner;
 import java.util.Set;
