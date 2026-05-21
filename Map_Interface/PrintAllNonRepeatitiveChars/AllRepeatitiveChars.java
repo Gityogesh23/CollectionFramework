@@ -41,4 +41,5 @@ HashMap: Stores key-value pairs using hashing for fast access, insertion, and de
 LinkedHashMap: Similar to HashMap but maintains the insertion order of key-value pairs.
 TreeMap: Stores key-value pairs in sorted order using natural ordering or a custom comparator.
 Hashtable: A synchronized Map implementation that doesn’t allow null keys or values.
+//////////////////////
 */
