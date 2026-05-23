@@ -58,3 +58,10 @@
             System.out.println(d.getName());
         }
     }
+    /*
+    OOPS:
+    1)Abstraction:Hiding necessary things but showing only the functionality. e.g Keyboard
+    2)Encapsulation: everything is bundled inside single unit e.g capsule in medicine.-contains granules packed inside it. 
+    3)Inheritance: One entity will inherits its parent entity features --> parent-child relationship.
+    4)Polymorphism: Object takes different forms in different cases or methods behaves differently in various situation.
+    */
