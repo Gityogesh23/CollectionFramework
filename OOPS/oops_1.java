@@ -59,7 +59,15 @@
         }
     }
     /*
-    OOPS:
+OOPS:
+Object-Oriented Programming (OOP) is a programming paradigm based on the concept of 
+objects that contain data (fields) and behavior (methods). It focuses on designing 
+software that closely represents real-world entities. It is used to:
+
+Improves code reusability
+Enhances maintainability and scalability
+Makes programs easier to understand and manage
+Closely models real-world entities
     1)Abstraction:Hiding necessary things but showing only the functionality. e.g Keyboard
     2)Encapsulation: everything is bundled inside single unit e.g capsule in medicine.-contains granules packed inside it. 
     3)Inheritance: One entity will inherits its parent entity features --> parent-child relationship.
