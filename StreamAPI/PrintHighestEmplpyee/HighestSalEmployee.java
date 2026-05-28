@@ -68,4 +68,11 @@ Javadoc include:isPresent(): Returns true if a value is present.
 ifPresent(Consumer action): Performs an action if a value exists.orElse(T other): Returns 
 the value if present, or a default value otherwise.ofNullable(T value): Creates an 
 Optional that may contain a null value.
+
+2. "Optional Operations"In many Java Collections Framework Javadocs (like List or Set), 
+you will see methods marked as "optional operation".Meaning: Classes implementing the 
+interface are not required to provide a functional implementation of that method.
+Behavior: If an implementation chooses not to support the operation, it must throw an 
+UnsupportedOperationException. For example, Collections.unmodifiableList() returns a 
+list where add() is an optional operation that throws an exception.
 */
