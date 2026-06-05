@@ -16,9 +16,9 @@ public class PrintNonRepeatedChar {
         //Step 1: to find frequency of each character.
          for( char ch: str.toCharArray()){
             if(map.containsKey(ch)){
-                map.put(ch,map.get(ch)+1);
+                map.put(ch,map.get(ch)+1);//if character or key is present then set its count to 1
             }else{
-                map.put(ch,1);
+                map.put(ch,1);//if above cond-fails like if its map doesn't contains the key then set its vount value to 1.
             }
          }
 
