@@ -18,7 +18,7 @@ public class PrintNonRepeatedChar {
             if(map.containsKey(ch)){
                 map.put(ch,map.get(ch)+1);//if character or key is present then set its count to 1
             }else{
-                map.put(ch,1);//if above cond-fails like if its map doesn't contains the key then set its vount value to 1.
+                map.put(ch,1);//if above cond-fails like if its map doesn't contains the key then set its count value to 1.
             }
          }
 
