@@ -12,6 +12,8 @@ class AllNonRepeatitiveChars{
         Map<Character,Integer>map=new HashMap<>();
         
         //to count frequency of characters.
+        // If "character" is in the map, add 1 to its current count. 
+        // If it's not in the map, start the count at 0, then add 1.
         for(char ch : str.toCharArray()){
             map.put(ch, map.getOrDefault(ch,0)+1);
         }
