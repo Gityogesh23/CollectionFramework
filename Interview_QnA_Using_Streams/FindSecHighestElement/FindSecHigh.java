@@ -3,12 +3,14 @@ import java.util.Arrays;
 import java.util.Comparator;
 public class FindSecHigh{
   public static void main(String[] args){
-    List<Integer>list=Arrays.asList(55,66,77,88,1000,1001);
+    List<Integer>list=Arrays.asList(55,66,77,88,1000,1001,1000);
     int SecHighestElement=list.stream()
+    .distinct()  //removes duplicate values e.g . one of the 1000
     .sorted(Comparator.reverseOrder())
     .skip(1)
     .findFirst()
-    .get();
+    .orElse(null);
+    // .get();
 System.out.println("The Second Highest Element Become: "+SecHighestElement);
   
   }
