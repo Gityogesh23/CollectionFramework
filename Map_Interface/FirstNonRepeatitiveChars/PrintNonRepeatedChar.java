@@ -63,7 +63,13 @@ A HashMap is a highly efficient data structure that stores data in key-value pai
  It uses a hashing algorithm to compute an index (a "bucket") where the value is 
  stored, allowing you to retrieve, insert, or delete data in constant time, 
 
-
+"When put() is called, HashMap first computes the key's hashCode() and applies a bit-mixing function. 
+It then calculates the bucket index using (capacity - 1) & hash. If the bucket is empty, it inserts a new node. 
+If a collision occurs, it searches the existing entries using the hash and equals(). If the key already exists,
+it updates the value; otherwise, it adds a new node. In Java 8+, if a bucket's linked list grows beyond 8 nodes 
+and the table capacity is at least 64, the linked list is converted into a Red-Black Tree to improve lookup 
+performance. When the number of entries exceeds the load factor threshold (75% of capacity by default), the 
+table is resized and the entries are rehashed."
 
 , on average
 */
