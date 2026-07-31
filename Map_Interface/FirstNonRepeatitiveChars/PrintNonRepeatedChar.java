@@ -16,7 +16,7 @@ public class PrintNonRepeatedChar {
         //Step 1: to find frequency of each character.
     for(char ch:str.toCharArray()){
         if(map.containsKey(ch)){
-            map.put(ch,map.get(ch)+1);
+            map.put(ch,map.get(ch)+1);//to count frequency this line inside if cond.
         }else{
             map.put(ch,1);
         }
@@ -24,7 +24,8 @@ public class PrintNonRepeatedChar {
     //step 2:Print character which occurs ones.
     for(char ch:str.toCharArray()){
         if(map.get(ch)==1){
-            System.out.println(ch);
+            System.out.println(ch); //to get Non-repeated chars.
+          //  break;-->to get first non repeated char.
         }
     }
     
