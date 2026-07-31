@@ -10,25 +10,24 @@ public class PrintNonRepeatedChar {
         Scanner sc= new Scanner(System.in);
         System.out.println("Enter the String :");
         String str=sc.nextLine();
-        str=str.toLowerCase();
+        str=str.replaceAll("[^A-Za-z]","").toLowerCase();
         Map<Character,Integer>map=new HashMap<>();
 
         //Step 1: to find frequency of each character.
-         for( char ch: str.toCharArray()){
-            if(map.containsKey(ch)){ ////count its frequency on next line .
-                map.put(ch,map.get(ch)+1);//V put(K key, V value) ,if character or key is present then set its count to 1
-            }else{
-                map.put(ch,1);//if above cond-fails like if its map doesn't contains the key then set its count value to 1.
-            }
-         }
-
-        //  step 2:  to print first non-repeatitive character.
-        for(char ch : str.toCharArray()){
-            if(map.get(ch)==1){
-                System.out.println("First non-repeatitive character is -->"+ch);
-                break;
-            }
+    for(char ch:str.toCharArray()){
+        if(map.containsKey(ch)){
+            map.put(ch,map.get(ch)+1);
+        }else{
+            map.put(ch,1);
         }
+    }
+    //step 2:Print character which occurs ones.
+    for(char ch:str.toCharArray()){
+        if(map.get(ch)==1){
+            System.out.println(ch);
+        }
+    }
+    
     }
 }
 
