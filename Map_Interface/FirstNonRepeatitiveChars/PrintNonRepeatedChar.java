@@ -27,10 +27,13 @@ public class PrintNonRepeatedChar {
             System.out.println(ch); //to get Non-repeated chars.
           //  break;-->to get first non repeated char.
         }
+           
+        }
+       
     }
     
     }
-}
+
 
 
 /* 
