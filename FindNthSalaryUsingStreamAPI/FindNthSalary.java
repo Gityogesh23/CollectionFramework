@@ -16,7 +16,7 @@ Employee(String name,double salary){
 Employee(){
 
 }
-public String getname(){
+public String getName(){
   return name;  
 }
 public double getSalary(){
@@ -36,15 +36,17 @@ public class FindNthSalary {
         System.out.println("Enter the rank (e.g 2 for 2nd highest): ");
         int n=sc.nextInt();
 
-        Optional<Double> getNthSalariedEmployee=employees.stream()
-                 .map(Employee::getSalary) //calling getSalary on each Employee instance.
+       // Optional<Double> getNthSalariedEmployee=employees.stream()
+       Optional<Employee>getNthSalariedEmployee=employees.stream()
+                 //.map(Employee::getSalary) //calling getSalary on each Employee instance.
                  .distinct() //to avoid duplicates
-                 .sorted(Comparator.reverseOrder()) // Sort numbers descending
+                 //.sorted(Comparator.reverseOrder()) // Sort numbers descending,return salary of type Double object
+                 .sorted(Comparator.comparing(Employee::getSalary).reversed())
                  .skip(n-1) // Skip first N-1 elements
                  .findFirst();// Get N-th element
 
                  getNthSalariedEmployee.ifPresentOrElse(
-                    salary->System.out.println(n+"th salary "+salary),
+                    emp->System.out.println(n+"th salary "+emp.getName()+"-"+emp.getSalary()),
                     ()->System.out.println("Not enough distinct slaries to determine :"+n+"highst salary.")
                  );
                 //  If Optional contains a value, the first lambda runs, with salary bound to that value.
