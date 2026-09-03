@@ -47,7 +47,7 @@ public class FindNthSalary {
 
                  getNthSalariedEmployee.ifPresentOrElse(
                     emp->System.out.println(n+"th salary "+emp.getName()+"-"+emp.getSalary()),
-                    ()->System.out.println("Not enough distinct slaries to determine :"+n+"highst salary.")
+                    ()->System.out.println("Not enough distinct salaries to determine :"+n+"highst salary.")
                  );
                 //  If Optional contains a value, the first lambda runs, with salary bound to that value.
                 //  If Optional is empty, the second lambda (no arguments, hence ()) runs instead.
