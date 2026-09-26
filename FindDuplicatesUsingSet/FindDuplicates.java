@@ -4,9 +4,9 @@ import java.util.Set;
 
 public class FindDuplicates {
 
-    public static Set findDup(int[] arr1) {
-        Set seen = new HashSet();
-        Set duplicates = new HashSet();
+    public static Set<Integer> findDup(int[] arr1) {
+        Set<Integer> seen = new HashSet();
+        Set<Integer> duplicates = new HashSet();
 
         for (int num : arr1) {
             if (!seen.add(num)) {
@@ -34,7 +34,7 @@ public class FindDuplicates {
         }
         System.out.println();
 
-        Set duplicates = findDup(arr);
+        Set<Integer> duplicates = findDup(arr);
 
         if (duplicates.isEmpty()) {
             System.out.println("No duplicates found.");
